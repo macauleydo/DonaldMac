@@ -1,0 +1,91 @@
+{
+	"id": "49c48d31-c6a0-4ac1-aa9a-89fe5201fdc4",
+	"name": "DonMacauley",
+	"timestamp": "2020-03-19T22:05:01.518Z",
+	"collection_id": "cfd695bb-d4ce-4152-b877-1c7953b8e33e",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "6e17c446-8129-4f15-a755-82dd468f59db",
+			"name": "Failed CivicAPI",
+			"url": "https://developers.google.com/civic-information",
+			"time": 319,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				319
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "aafc1752-28d3-4acb-8267-70b4860e1c56",
+			"name": "CivicAPI",
+			"url": "https://developers.google.com/civic-information",
+			"time": 461,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				461
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"collection": {
+		"requests": [
+			{
+				"id": "6e17c446-8129-4f15-a755-82dd468f59db",
+				"method": "GET"
+			},
+			{
+				"id": "aafc1752-28d3-4acb-8267-70b4860e1c56",
+				"method": "GET"
+			}
+		]
+	}
+}
