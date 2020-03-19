@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "cfd695bb-d4ce-4152-b877-1c7953b8e33e",
+		"name": "DonMacauley",
+		"description": "CNN SDET Google Civic API test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Failed CivicAPI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ab0d108-0473-49b2-bb03-1be28fceb36b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(205);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.google.com/civic-information",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"google",
+						"com"
+					],
+					"path": [
+						"civic-information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CivicAPI",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ab0d108-0473-49b2-bb03-1be28fceb36b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"google-signin-client-id\");",
+							"    pm.expect(pm.response.text()).to.include(\"google-signin-scope\");",
+							"    pm.expect(pm.response.text()).to.include(\"og:site_name\");",
+							"    pm.expect(pm.response.text()).to.include(\"og:type\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.google.com/civic-information",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"google",
+						"com"
+					],
+					"path": [
+						"civic-information"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
