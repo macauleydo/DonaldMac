@@ -1,18 +1,17 @@
 {
-	"id": "49c48d31-c6a0-4ac1-aa9a-89fe5201fdc4",
+	"id": "bfee3205-7f3c-4c65-a686-2ffbdba3f6e3",
 	"name": "DonMacauley",
-	"timestamp": "2020-03-19T22:05:01.518Z",
+	"timestamp": "2020-03-20T01:18:17.373Z",
 	"collection_id": "cfd695bb-d4ce-4152-b877-1c7953b8e33e",
 	"folder_id": 0,
 	"environment_id": "0",
-	"totalPass": 3,
-	"totalFail": 1,
+	"totalPass": 8,
+	"totalFail": 4,
 	"results": [
 		{
 			"id": "6e17c446-8129-4f15-a755-82dd468f59db",
 			"name": "Failed CivicAPI",
-			"url": "https://developers.google.com/civic-information",
-			"time": 319,
+			"time": 288,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -23,13 +22,21 @@
 			"testPassFailCounts": {
 				"Status code is 200": {
 					"pass": 0,
-					"fail": 1
+					"fail": 3
 				}
 			},
 			"times": [
-				319
+				310,
+				309,
+				288
 			],
 			"allTests": [
+				{
+					"Status code is 200": false
+				},
+				{
+					"Status code is 200": false
+				},
 				{
 					"Status code is 200": false
 				}
@@ -38,8 +45,7 @@
 		{
 			"id": "aafc1752-28d3-4acb-8267-70b4860e1c56",
 			"name": "CivicAPI",
-			"url": "https://developers.google.com/civic-information",
-			"time": 461,
+			"time": 902,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -47,35 +53,47 @@
 			"tests": {
 				"Status code is 200": true,
 				"Body matches string": true,
-				"Response time is less than 200ms": true
+				"Response time is less than 200ms": false
 			},
 			"testPassFailCounts": {
 				"Status code is 200": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"Body matches string": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"Response time is less than 200ms": {
-					"pass": 1,
-					"fail": 0
+					"pass": 2,
+					"fail": 1
 				}
 			},
 			"times": [
-				461
+				323,
+				233,
+				902
 			],
 			"allTests": [
 				{
 					"Status code is 200": true,
 					"Body matches string": true,
 					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Response time is less than 200ms": false
 				}
 			]
 		}
 	],
-	"count": 1,
+	"count": 3,
 	"collection": {
 		"requests": [
 			{
